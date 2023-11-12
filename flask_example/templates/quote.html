@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Famous Quote</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Random Famous Quote</h1>
+        <p id="quote" class="quote">{{ quote }}</p>
+        <button id="generate-button" class="btn" onclick="generateQuote()">Generate Quote</button>
+    </div>
+    
+    <script>
+        function generateQuote() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
