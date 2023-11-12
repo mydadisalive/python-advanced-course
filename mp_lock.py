@@ -2,15 +2,17 @@ import multiprocessing
 
 # Function to increment a shared counter using a Lock
 def increment_counter(counter, lock):
-    for _ in range(1000):
+    for i in range(20):
         with lock:
             counter.value += 1
+            print(i, counter.value, "incrementing 1")
 
 # Function to decrement a shared counter using a Lock
 def decrement_counter(counter, lock):
-    for _ in range(1000):
+    for i in range(20):
         with lock:
             counter.value -= 1
+            print(i, counter.value, "decrementing 1")
 
 if __name__ == "__main__":
     # Create a shared counter and a Lock to protect it

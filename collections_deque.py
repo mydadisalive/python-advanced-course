@@ -11,3 +11,5 @@ queue.append('Task 3')
 # Remove elements from the deque
 completed_task = queue.popleft()
 print(f"Completed task: {completed_task}")
+
+print(queue)
