@@ -4,7 +4,7 @@ import itertools
 colors = ["Red", "Green", "Blue", "Yellow"]
 
 # Generate all combinations of 2 colors
-combinations = itertools.combinations(colors, 2)
+combinations = itertools.combinations(colors, 3)
 
 # Print the combinations
 for combo in combinations:

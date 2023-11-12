@@ -13,3 +13,5 @@ args = parser.parse_args()
 # Access the arguments
 input_file = args.input
 output_file = args.output
+
+print(input_file, output_file)
