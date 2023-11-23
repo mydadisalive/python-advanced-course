@@ -3,7 +3,7 @@ import time
 
 def calculate_square(number):
     if number == 3:
-        time.sleep(3)
+        time.sleep(5)
     result = number * number
     print(f"The square of {number} is {result}")
 
@@ -15,6 +15,8 @@ if __name__ == "__main__":
         process = multiprocessing.Process(target=calculate_square, args=(num,))
         processes.append(process)
         process.start()
+
+    # DO STUFF
 
     for process in processes:
         process.join()

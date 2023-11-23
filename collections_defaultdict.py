@@ -9,3 +9,5 @@ grades['Bob'] = 88
 
 # Access a missing key (returns the default value, 0)
 print("Charlie's grade:", grades['Charlie'])
+print("Charlie's grade:", grades['Jack'])
+print(grades)
