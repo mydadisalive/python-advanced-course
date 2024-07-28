@@ -1,3 +1,5 @@
+# good example: https://www.linkedin.com/pulse/static-method-vs-class-instance-python-3-ryan-parsa-kvgdc/
+
 class MyClass:
     def __init__(self):
         self.public_var = "I am public"
@@ -34,3 +36,5 @@ print(obj._protected_method())  # Protected method
 # Accessing private variables and methods through name mangling
 print(obj._MyClass__private_var)  # I am private
 print(obj.access_private_method())  # Private method
+
+
