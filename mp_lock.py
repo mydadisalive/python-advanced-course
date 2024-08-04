@@ -1,4 +1,5 @@
 import multiprocessing
+import time
 
 # Function to increment a shared counter using a Lock
 def increment_counter(counter, lock):
@@ -6,6 +7,7 @@ def increment_counter(counter, lock):
         with lock:
             counter.value += 1
             print(i, counter.value, "incrementing 1")
+        time.sleep(0.01)  # Introduce a small delay
 
 # Function to decrement a shared counter using a Lock
 def decrement_counter(counter, lock):
@@ -13,6 +15,7 @@ def decrement_counter(counter, lock):
         with lock:
             counter.value -= 1
             print(i, counter.value, "decrementing 1")
+        time.sleep(0.01)  # Introduce a small delay
 
 if __name__ == "__main__":
     # Create a shared counter and a Lock to protect it
