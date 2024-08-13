@@ -8,10 +8,20 @@ output_lock = threading.Lock()
 
 # Function to increment the counter
 def increment_counter():
+    """
+    Increments a shared counter by 1, 1000 times, while ensuring thread safety using a lock.
+
+    Global Variables:
+        counter (int): The shared counter to be incremented.
+
+    Returns:
+        None
+    """
     global counter
     for _ in range(1000):
         with output_lock:
             counter += 1
+            print(threading.current_thread().name, counter)
 
 if __name__ == "__main__":
     # Create two threads
